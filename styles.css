@@ -383,39 +383,43 @@ nav {
 
 .project-text {
   order: 1;
-    }
+}
 
-    .projectpage div[style*="display: flex"] {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 15px;
-    }
+.projectpage div[style*="display: flex"] {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
 
-    .projectpage img {
-        width: 100% !important;
-        max-width: 500px;
-        height: auto;
-    }
+.projectpage img {
+  width: 100% !important;
+  max-width: 500px;
+  height: auto;
+}
 
-    h1 {
-        font-size: 2rem;
-    }
+h1 {
+  font-size: 2rem;
+}
 
-    h2 {
-        font-size: 1.5rem;
-    }
+h2 {
+  font-size: 1.5rem;
+}
 
-    p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
     
-    .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+#showMore:active {
+  background-color: red;
+}
 
 
 }
