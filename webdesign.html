@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SHTEI Photography and Design</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header id="header">
+    
+    <nav>
+        <div class="navlink line"><p><a href="index.html">Home</a></p><img src="line.png"></div>
+       <div class="navlink circle"><p><a href="photography.html">Photography<img src="circle.png"></a></p></div>
+        <div class="navlink cross"><p><a href="graphicdesign.html">Graphic Design<img src="ciross.png"></a></p></div>
+        <div class="navlink wave on"><p><a href="webdesign.html">Web Design<img src="wave.png"></a></p></div>
+        <div class="navlink shine"><p><a href="about.html">About<img src="shine.png"></a></p></div>
+        <div class="navlink swirl"><p><a href="contact.html">Contact<img src="swirl.png"></a></p></div>
+        
+
+    </nav>
+
+    </header>
+    <main>
+
+
+<div class="projectpage">
+            <div class="project-text">
+               
+                    <h1>Web Design</h1>
+                    <p>I design websites, particularly personal websites and websites that introduce a business, music band, artist, or project. I take a very personal approach to every collaboration, helping clients define their target audience and develop an aesthetic based on their individual needs and identity. The goal is to create a website that presents the project clearly and in the best possible way.</p>
+            </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="projectpage"> 
+            <div class="project-images">
+                <div class="carousel">
+                    <button class="prev">&#10094;</button>
+
+                    <div class="slides">
+                        <div class="slide">
+                        <img src="project/almarosehome.png" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                        <img src="project/almaroseabout.png" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                        <img src="project/almaroseprojects2.png" alt="Image 3">
+                        </div>
+                    </div>
+
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+
+            <div class="project-text">
+                <div class="project-text">
+                    <h3>Alma Rose Quartet</h3>
+                    <p>Website designed for Alma Rosé Quartett, a Vienna-based chamber ensemble dedicated to 20th-century repertoire and composers affected by persecution and oppression. The site presents the ensemble's concerts, projects, and mission through a clean and accessible design.</p></div>
+                    <a class="link" href="https://almarosequartet.com/"><p>Link to the web site</p></a>
+                </div>
+        </div>
+
+
+          <div class="projectpage"> 
+            <div class="project-images">
+                <div class="carousel">
+                    <button class="prev">&#10094;</button>
+
+                    <div class="slides">
+                        <div class="slide">
+                        <img src="project/almamala2.png" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                        <img src="project/almamala1.png" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                        <img src="project/alamala3.png" alt="Image 3">
+                        </div>
+                    </div>
+
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+
+            <div class="project-text">
+                <div class="project-text">
+                    <h3>Marie Alma Mala Schmidt</h3>
+                    <p>Website designed for Alma Rosé Quartett, a Vienna-based chamber ensemble dedicated to 20th-century repertoire and composers affected by persecution and oppression. The site presents the ensemble's concerts, projects, and mission through a clean and accessible design.</p></div>
+                    <a class="link" href=""><p>Link to the web site</p></a>
+                </div>
+        </div>
+
+
+    </main>
+    <footer>
+	</footer>
+
+    <script>
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const slides = carousel.querySelector('.slides');
+  const slideCount = carousel.querySelectorAll('.slide').length;
+
+  let currentIndex = 0;
+
+  carousel.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateCarousel();
+  });
+
+  carousel.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+});
+</script>
+</body>
+</html>

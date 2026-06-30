@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SHTEI Photography and Design</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="lightbox2-2.12.0\dist\css\lightbox.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header id="header">
+    
+    <nav>
+        <div class="navlink line"><p><a href="index.html">Home</a></p><img src="line.png"></div>
+       <div class="navlink circle"><p><a href="photography.html">Photography<img src="circle.png"></a></p></div>
+        <div class="navlink cross"><p><a href="graphicdesign.html">Graphic Design<img src="ciross.png"></a></p></div>
+        <div class="navlink wave"><p><a href="webdesign.html">Web Design<img src="wave.png"></a></p></div>
+        <div class="navlink shine"><p><a href="about.html">About<img src="shine.png"></a></p></div>
+        <div class="navlink swirl"><p><a href="contact.html">Contact<img src="swirl.png"></a></p></div>
+        
+
+    </nav>
+
+    </header>
+
+    <main>
+
+
+        <div class="projectpage">
+            <div class="project-text">
+               
+                    <h1>Selected works</h1>
+                    <p>A selection of my passion projects and my personal favourites.</p>
+            </div>
+            <div class="">
+                
+            </div>
+        </div>
+
+            
+
+
+
+
+        <div class="gallery" id="gallery"></div>
+
+<button id="showMore">Show More</button>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        const showMoreBtn = document.getElementById('showMore');
+
+        const totalPhotos = 33;
+        const batchSize = 8;
+        let visibleCount = 0;
+
+        function loadMore() {
+            const end = Math.min(visibleCount + batchSize, totalPhotos);
+
+            for (let i = visibleCount + 1; i <= end; i++) {
+                const file = String(i).padStart(2, '0') + '.jpg';
+
+                gallery.insertAdjacentHTML('beforeend', `
+                    <a href="photography/fav/${file}" data-lightbox="gallery">
+                        <img src="photography/fav/${file}" alt="${file}">
+                    </a>
+                `);
+            }
+
+            visibleCount = end;
+
+            if (visibleCount >= totalPhotos) {
+                showMoreBtn.style.display = 'none';
+            }
+        }
+
+        loadMore(); // Initial 8 photos
+
+        showMoreBtn.addEventListener('click', loadMore);
+    </script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="lightbox2-2.12.0/dist/js/lightbox.min.js"></script>
+
+<script>
+lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true
+});
+</script>
+
+ 
+
+    </main>
+    <footer>
+	</footer>
+<script src="lightbox2-2.12.0\dist\js\lightbox-plus-jquery.js"></script>
+</html>
