@@ -368,7 +368,11 @@ nav {
   
 }
 
-
+.project .description {
+  opacity: 0.7;
+  background-color: white;
+  color: red;
+}
 
 .projectpage {
   display: flex;
