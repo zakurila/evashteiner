@@ -30,11 +30,10 @@
         <div class="projectpage">
             <div class="project-text">
                
-                    <h1>Selected works</h1>
-                    <p>A selection of my passion projects and my personal favourites.</p>
+                    <h1>Couples and families</h1>
+                    <p>I take portraits of families and couples in natural settings or studio environments to capture memorable moments and authentic emotions.</p>
             </div>
-            <div class="">
-                
+            <div>
             </div>
         </div>
 
@@ -51,7 +50,7 @@
         const gallery = document.getElementById('gallery');
         const showMoreBtn = document.getElementById('showMore');
 
-        const totalPhotos = 41;
+        const totalPhotos = 12;
         const batchSize = 8;
         let visibleCount = 0;
 
@@ -62,8 +61,8 @@
                 const file = String(i).padStart(2, '0') + '.jpg';
 
                 gallery.insertAdjacentHTML('beforeend', `
-                    <a href="photography/fav/${file}" data-lightbox="gallery">
-                        <img src="photography/fav/${file}" alt="${file}">
+                    <a href="photography/couples/${file}" data-lightbox="gallery">
+                        <img src="photography/couples/${file}" alt="${file}">
                     </a>
                 `);
             }
