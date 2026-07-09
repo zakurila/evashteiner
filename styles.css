@@ -503,6 +503,10 @@ footer {
   margin: 10px 0 0 10px;
 }
 
+#menuBtn a {
+ color:black;
+}
+
 #menuBtn::after {
   content: "MENU";
   position: absolute;
@@ -512,6 +516,7 @@ footer {
   font-family: "Bebas Neue", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
+  color: black;
 }
 
 #menu {
