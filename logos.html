@@ -8,18 +8,26 @@
 </head>
 
 <body>
-    <header id="header">
+  <header id="header">
+        <div class="headermobile">
+            <button id="menuBtn"><img class="menu-btn" src="menu.png"></button>
+            <h2 class="titlemobile">
+  <span class="shtei">SHTEI</span>
+  <span class="subtitle">Photography and Design</span>
+</h2>
+        </div>
+        <hr class="divider">
     
-    <nav>
-        <div class="navlink line"><p><a href="index.html">Home</a></p><img src="line.png"></div>
-       <div class="navlink circle"><p><a href="photography.html">Photography<img src="circle.png"></a></p></div>
-        <div class="navlink cross"><p><a href="graphicdesign.html">Graphic Design<img src="ciross.png"></a></p></div>
-        <div class="navlink wave"><p><a href="webdesign.html">Web Design<img src="wave.png"></a></p></div>
-        <div class="navlink shine"><p><a href="about.html">About<img src="shine.png"></a></p></div>
-        <div class="navlink swirl"><p><a href="contact.html">Contact<img src="swirl.png"></a></p></div>
-        
+        <nav  id="menu">
+            <div class="navlink line"><p><a href="index.html">Home <img src="line.png"></a></p></div>
+            <div class="navlink circle"><p><a href="photography.html">Photography<img src="circle.png"></a></p></div>
+            <div class="navlink cross"><p><a href="graphicdesign.html">Graphic Design<img src="ciross.png"></a></p></div>
+            <div class="navlink wave"><p><a href="webdesign.html">Web Design<img src="wave.png"></a></p></div>
+            <div class="navlink shine"><p><a href="about.html">About<img src="shine.png"></a></p></div>
+            <div class="navlink swirl"><p><a href="contact.html">Contact<img src="swirl.png"></a></p></div>
+            
 
-    </nav>
+        </nav>
 
     </header>
 
@@ -62,5 +70,13 @@
     </main>
     <footer>
 	</footer>
+         <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>

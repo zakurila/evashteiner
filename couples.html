@@ -8,19 +8,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body> 
     <header id="header">
-    
-    <nav>
-        <div class="navlink line"><p><a href="index.html">Home</a></p><img src="line.png"></div>
-       <div class="navlink circle"><p><a href="photography.html">Photography<img src="circle.png"></a></p></div>
-        <div class="navlink cross"><p><a href="graphicdesign.html">Graphic Design<img src="ciross.png"></a></p></div>
-        <div class="navlink wave"><p><a href="webdesign.html">Web Design<img src="wave.png"></a></p></div>
-        <div class="navlink shine"><p><a href="about.html">About<img src="shine.png"></a></p></div>
-        <div class="navlink swirl"><p><a href="contact.html">Contact<img src="swirl.png"></a></p></div>
-        
+        <div class="headermobile">
+                    <button id="menuBtn"><img class="menu-btn" src="menu.png"></button>
+                    <h2 class="titlemobile">SHTEI Photography and Design</h2>
+            </div>
+            <hr class="divider">
+            
+            <nav  id="menu">
+                    <div class="navlink line"><p><a href="index.html">Home</a></p><img src="line.png"></div>
+                    <div class="navlink circle"><p><a href="photography.html">Photography<img src="circle.png"></a></p></div>
+                    <div class="navlink cross"><p><a href="graphicdesign.html">Graphic Design<img src="ciross.png"></a></p></div>
+                    <div class="navlink wave"><p><a href="webdesign.html">Web Design<img src="wave.png"></a></p></div>
+                    <div class="navlink shine"><p><a href="about.html">About<img src="shine.png"></a></p></div>
+                    <div class="navlink swirl"><p><a href="contact.html">Contact<img src="swirl.png"></a></p></div>
+                    
 
-    </nav>
+            </nav>
 
     </header>
 
@@ -44,7 +49,8 @@
 
         <div class="gallery" id="gallery"></div>
 
-<button id="showMore">Show More</button>
+        <button id="showMore">Show More</button>
+        <a href="#header" class="back">Back to Menu</a>
 
     <script>
         const gallery = document.getElementById('gallery');
@@ -94,6 +100,17 @@ lightbox.option({
 
     </main>
     <footer>
+        <p>eva shteiner</p>
+        <p>photography / design / web</p>
+        <p>evashteinerdesign@gmail.com</p>
 	</footer>
+        <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("open");
+        });
+    </script>
 <script src="lightbox2-2.12.0\dist\js\lightbox-plus-jquery.js"></script>
 </html>
