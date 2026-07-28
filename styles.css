@@ -29,7 +29,6 @@ html, body {
 }
 
 body {
-  background-image: url("top2.png");
   background-repeat: no-repeat;    
   background-size: contain;
 }
@@ -52,9 +51,9 @@ body {
 
 
 main {
-  max-width: 90vw;
+  
   margin: 5vh auto;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
@@ -426,6 +425,9 @@ max-width: 100%;
   background-color: red;
 }
 
+.hidden-photo {
+    display: none !important;
+}
 
 
 /* about */
@@ -636,7 +638,7 @@ nav {
 }
 
 .project img {
-  width: 100vw;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -653,10 +655,11 @@ nav {
   order: 1;
 }
 
-.projectpage div{
+.projectpage > div{
   display: flex !important;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 100%;
   gap: 15px;
 }
@@ -695,22 +698,22 @@ p {
   flex-direction: column;
 
 }
+
+.projectpage {
+  display: flex !important;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 500px) {
+.projectpage > .project-text {
+  order: 1;
+}
 
-    .projectpage {
-        display: flex !important;
-        flex-direction: column;
-    }
+.project-images{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .projectpage > .project-text {
-        order: 1;
-    }
-     .project-images{
-        order:2;
-        flex-wrap: wrap;
-    }
 }
 
 
