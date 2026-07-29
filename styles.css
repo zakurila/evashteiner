@@ -22,6 +22,14 @@
   }
 
 
+@font-face {
+  font-family: KolkerBrush;
+  src: url("fonts/KolkerBrush-Regular.ttf"); 
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -29,15 +37,16 @@ html, body {
 }
 
 body {
+  background-image: url(bg2.PNG);
   background-repeat: no-repeat;    
-  background-size: contain;
+  background-size: cover;
 }
 
 
 .construction {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 2em;
-  color: red;
+  color: #632d45;
   padding: 5px;
   border: 2px solid black;
   text-align: center;
@@ -52,31 +61,42 @@ body {
 
 main {
   
-  margin: 5vh auto;
+  margin: 5vh auto 0;
   box-sizing: border-box;
 }
 
 
 h1 {
-  font-family: impact;
-  font-size: 2em;
+  font-family: KolkerBrush;
+  font-size: 6em;
+  font-weight: bold;
+  margin: 0;
 }
 
 h2 {
-  font-family: impact;
+  font-family: Cormorant Garamond;
   font-size: 1.8em;
+  font-weight: bold;
 }
 
 
 h3 {
-  font-family: impact;
+  font-family: Cormorant Garamond;
   font-size: 2em;
+  font-weight: bold;
   
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+
+p {
+  font-family: SpaceGrotesk;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 #headerimg {
@@ -96,11 +116,11 @@ a {
 }
 
 footer {
-  background-image: url("IMG_5327.JPG");
+  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  padding: 120px 0 40px 0;
+  padding: 60px 0 40px 0;
   text-align: center;
   margin-top: 0;
 }
@@ -117,12 +137,12 @@ footer:before {
   display: block;
   width: 70px;
   height: 4px;
-  background: red;
+  background: #632d45;
   margin: 0 auto 12px;
 }
 
 footer p:first-child {
-  font-family: "Impact", sans-serif;
+  font-family: "Cormorant Garamond", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -139,14 +159,14 @@ footer p:last-child {
 .back {
   display: block;
   text-align: center;
-  margin: 5vh auto;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 20px auto;
+  font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.2em;
-  color: black;
+  color: white;
 }
 
 .back:hover {
-  color: red;
+  color: white;
   cursor: pointer;
   background-image: url("line.png");
   background-size: 200px;       
@@ -169,8 +189,11 @@ nav, nav a {
   display: flex;
   gap: 7vw;
   justify-content: center;
-  font-family: impact;
-  font-size: 17px;
+  font-family: Cormorant Garamond;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 
@@ -182,7 +205,7 @@ nav, nav a {
   position: absolute;
   top: 50%;
   left: -90%;
-  width: 140px;
+  width: 100px;
 }
 
 .navlink:hover {
@@ -204,38 +227,39 @@ nav, nav a {
 .line img {
   top: 10%;
   left: -120%;
-  width: 400%;
+  width: 300%;
 }
 
 .circle img {
   top: 10%;
-  left: -90%;
-  width: 300%;
+  left: -50%;
+  width: 200%;
 }
 
 .cross img {
   top: 10%;
-  left: -20%;
-  width: 130%;
+  left: 0%;
+  width: 100%;
 }
 
 .wave img {
   top: 20%;
-  left: -40%;
-  width: 200%;
+  left: -20%;
+  width: 150%;
 }
 
 .shine img {
   top: 10%;
-  left: -190%;
-  width: 500%;
+  left: -140%;
+  width: 400%;
 }
 
 .swirl img {
   top: 0%;
-  left: -100%;
-  width: 270%;
+  left: -50%;
+  width: 180%;
 }
+
 
 .on img {
   display: block;
@@ -245,7 +269,7 @@ nav, nav a {
 
 
 .link:hover {
-  color: red;
+  color: #632d45;
 }
 
 .projects {
@@ -277,8 +301,9 @@ nav, nav a {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s;
-  font-family: impact;
-  font-size: 20px;
+  font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -288,7 +313,9 @@ nav, nav a {
 
 .project:hover .description {
   opacity: 1;
-  background-color: white;
+  color: white;
+  background-image: url("IMG_5347.PNG");
+  background-size: cover;
 
 }
 
@@ -296,7 +323,7 @@ nav, nav a {
 
 .description:hover {
   cursor: pointer;
-  color: red;
+  color: #632d45;
 }
 
 
@@ -335,12 +362,12 @@ margin: 0 0 3vw 0;
 
 
 p {
-  font-family: Inter, sans-serif;
+  font-family: Cormorant Garamond, sans-serif;
   font-size: 1.1em;
 }
 
 .link p {
-  font-family: Impact, sans-serif;
+  font-family: Cormorant Garamond, sans-serif;
 }
 
 
@@ -416,17 +443,19 @@ max-width: 100%;
   padding: 10px 20px;
   cursor: pointer;
   background-color: white;
-  font-family: "SpaceGrotesk", 'Arial Narrow Bold', sans-serif;
+  font-family: "Cormorant Garamond", 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
   color: black;
+  border: none;
 }
 
 
 #showMore:hover {
-  background-color: red;
+  background-color: #632d45;
 }
 
 .hidden-photo {
-    display: none !important;
+  display: none !important;
 }
 
 
@@ -443,8 +472,11 @@ max-width: 100%;
 }
 
 .about p {
-  border-left: 10px solid red;
+  border-left: 10px solid #632d45;
   padding-left: 5px;
+  color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+
 
 }
 
@@ -456,14 +488,14 @@ max-width: 100%;
   margin-top: 20px;
   padding-left: 15px;
   border-left: 2px solid black;
-  color: red;
+  color: #632d45;
 }
 
 .pointedu {
   padding: 10px 15px;
   background: #f5f5f5;
   position: relative;
-  font-family: Inter, sans-serif;
+  font-family: Cormorant Garamond, sans-serif;
 }
 
 .pointedu::before {
@@ -487,7 +519,10 @@ body {
 
 footer {
   margin-top: auto;
+  padding-top: 30px;
 }
+
+
 
 #menuBtn img {
   width: 60px;
@@ -541,7 +576,7 @@ footer {
 
 
 .divider {
-  border-top: 3px solid red;
+  border-top: 3px solid #632d45;
   margin: 40px 0 10px 0;
   display: block;
 }
@@ -555,7 +590,7 @@ footer {
 
 .titlemobile .shtei {
   display: block;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 2em;
 }
 
@@ -625,7 +660,7 @@ nav {
   width: 100%;
   opacity: 1;
   background-color: white;
-  color: red;
+  color: #632d45;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -671,7 +706,7 @@ nav {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 60px;
 }
 
 h2 {
@@ -689,7 +724,7 @@ p {
 }
 
 #showMore:active {
-  background-color: red;
+  background-color: #632d45;
 }
 
 
