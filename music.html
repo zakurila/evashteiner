@@ -17,7 +17,6 @@
   <span class="subtitle">Photography and Design</span>
 </h2>
         </div>
-        <hr class="divider">
     
         <nav  id="menu">
             <div class="navlink line"><p><a href="index.html">Home <img src="line.png"></a></p></div>
@@ -36,23 +35,16 @@
     <main>
 
 
-        <div class="projectpage">
+        <a href="photography.html">... / Back</a>
+        <div class="photopage">
             <div class="project-text">
-               
-                    <h1>Classical music</h1>
-                    <p></p>
+                    <h1>Music</h1>
+                    <p>I have a long-standing collaboration with classical and contemporary musicians, creating imagery that complements and translates their music into a visual language. My work ranges from concert posters and album covers to promotional materials, with a focus on capturing the character and atmosphere of each project.</p>
             </div>
-            <div class="">
-                
-            </div>
+            <img src="divider.png" class="dividerimg">
+            <div class="gallery" id="gallery"></div>
+
         </div>
-
-            
-
-
-
-
-        <div class="gallery" id="gallery"></div>
 
 <button id="showMore">Show More</button>
 
@@ -60,7 +52,7 @@
         const gallery = document.getElementById('gallery');
         const showMoreBtn = document.getElementById('showMore');
 
-        const totalPhotos = 3;
+        const totalPhotos = 10;
         const batchSize = 8;
         let visibleCount = 0;
 

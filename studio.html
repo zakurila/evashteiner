@@ -17,7 +17,6 @@
   <span class="subtitle">Photography and Design</span>
 </h2>
         </div>
-        <hr class="divider">
     
         <nav  id="menu">
             <div class="navlink line"><p><a href="index.html">Home <img src="line.png"></a></p></div>
@@ -33,25 +32,18 @@
     </header>
 
     <main>
-
-
-        <div class="projectpage">
+        <a href="photography.html">... / Back</a>
+        <div class="photopage">
             <div class="project-text">
-               
                     <h1>Studio</h1>
-                    <p></p>
+                    <p>A studio can create a controlled and minimalist environment, offering a clean aesthetic, greater creative freedom, and a polished, professional look.
+                        It can serve as a tool for almost any kind of photoshoot, ranging from artistic album covers to professional portraits.</p>
             </div>
-            <div class="">
-                
-            </div>
+            <img src="divider.png" class="dividerimg">
+            <div class="gallery" id="gallery"></div>
+
         </div>
 
-            
-
-
-
-
-        <div class="gallery" id="gallery"></div>
 
 <button id="showMore">Show More</button>
 
@@ -59,7 +51,7 @@
         const gallery = document.getElementById('gallery');
         const showMoreBtn = document.getElementById('showMore');
 
-        const totalPhotos = 24;
+        const totalPhotos = 25;
         const batchSize = 8;
         let visibleCount = 0;
 
