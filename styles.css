@@ -34,21 +34,26 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  min-height: 100%;
 }
 
 body {
-  background-image: url(bg2.PNG);
-  background-repeat: no-repeat;    
-  background-size: cover;
+    background-color: black;
+    background-image: url("backgr5.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-position: top left;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .construction {
   font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 2em;
-  color: #632d45;
+  color: white;
   padding: 5px;
-  border: 2px solid black;
+  border: 2px solid white;
   text-align: center;
   display: block;
   width: fit-content;
@@ -63,6 +68,7 @@ main {
   
   margin: 5vh auto 0;
   box-sizing: border-box;
+  flex: 1;
 }
 
 
@@ -71,12 +77,14 @@ h1 {
   font-size: 6em;
   font-weight: bold;
   margin: 0;
+  color: white;
 }
 
 h2 {
   font-family: Cormorant Garamond;
   font-size: 1.8em;
   font-weight: bold;
+  color: white;
 }
 
 
@@ -84,19 +92,25 @@ h3 {
   font-family: Cormorant Garamond;
   font-size: 2em;
   font-weight: bold;
+  color: white;
   
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
+
+a:hover {
+  color: red;
+}
 
 p {
   font-family: SpaceGrotesk;
   font-size: 1.1em;
   line-height: 1.6;
+  color: white;
 }
 
 #headerimg {
@@ -113,6 +127,44 @@ p {
 
 .divider {
   display: none;
+}
+
+.dividerimg {
+  display: block;
+  margin: 5vh auto;
+  width: 70vw;
+  height: auto;
+  max-width: 400px;
+}
+
+.firstletter-title {
+  display: flex;
+  align-items: baseline;
+  margin: 20vh 0 5vh 10vw;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.firstletter-title img {
+  width: 100px;
+  display: block;
+}
+
+.firstletter-title span {
+  display: inline;
+  margin-left: -70px;
+}
+
+
+.page-description {
+  margin: 0 10vw;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: white;
 }
 
 footer {
@@ -137,7 +189,7 @@ footer:before {
   display: block;
   width: 70px;
   height: 4px;
-  background: #632d45;
+  background: white;
   margin: 0 auto 12px;
 }
 
@@ -268,54 +320,60 @@ nav, nav a {
 /* Projects Gallery */ 
 
 
-.link:hover {
-  color: #632d45;
-}
-
 .projects {
-  display: flex;
-  gap: 5vw;
-  width: 100%;
-  flex-wrap: wrap;
-  margin: 5vh auto;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 70vw;
+  gap: 7vw 5vw;
+  margin: 8vh auto;
 }
 
 .project {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: auto;
   position: relative;
-  aspect-ratio: 1 / 1;
+  min-width: 0;
+  position: relative;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,0.5);
 }
+
 
 .project img {
-  width: 350px;
-  height: 350px;
-  }
-
-.description {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-weight: bold;
-  font-size: 25px;
   width: 100%;
-  height: 100%;
-  margin: 0;
-  text-align: center;
-  line-height: 1;
+  height: auto;
 }
 
-.project:hover .description {
-  opacity: 1;
-  color: white;
-  background-image: url("IMG_5347.PNG");
-  background-size: cover;
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin: 10px 0 0;
+  font-family: SpaceGrotesk, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+}
+
+.projects {
+  counter-reset: project;
+}
+
+.project {
+  counter-increment: project;
+}
+
+.description::before {
+  content: counter(project, decimal-leading-zero) " /";
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+.project:hover {
+  border-color: red;
 
 }
 
@@ -323,7 +381,7 @@ nav, nav a {
 
 .description:hover {
   cursor: pointer;
-  color: #632d45;
+  color:white;
 }
 
 
@@ -336,13 +394,31 @@ nav, nav a {
 
 
 
+.photopage {
+  width: 80vw;
+  margin: 5vh auto;
+  align-items: start;
+}
+
+
+
 .projectpage {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
-  width: 90vw;
-  margin: 5vh auto;
+  width: 80vw;
+  margin: 10vh auto 0 auto;
   align-items: start;
+}
+
+.descriptionspan {
+  display: block;
+  font-family: SpaceGrotesk, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: right;
+  color:darkgrey;
 }
 
 .projectpage img {
@@ -352,15 +428,24 @@ nav, nav a {
   margin-bottom: 5vw;
 }
 
-.projectpage h3 {
+.projectpage h1 {
 margin: 0 0 3vw 0;
 }
 
 .projectpage p {
   margin: 0 0 3vw;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
+
+.project-text {
+  font-family: Cormorant Garamond, sans-serif;
+  font-size: 1em;
+}
+
+.project-text p{
+  text-indent: 2em;
+  margin: 0;
+}
 
 p {
   font-family: Cormorant Garamond, sans-serif;
@@ -417,7 +502,7 @@ max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -446,13 +531,13 @@ max-width: 100%;
   background-color: white;
   font-family: "Cormorant Garamond", 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
-  color: black;
+  color: red;
   border: none;
 }
 
 
 #showMore:hover {
-  background-color: #632d45;
+  background-color: white;
 }
 
 .hidden-photo {
@@ -473,10 +558,9 @@ max-width: 100%;
 }
 
 .about p {
-  border-left: 10px solid #632d45;
+  border-left: 10px solid white;
   padding-left: 5px;
-  color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+  color: white;
 
 
 }
@@ -488,13 +572,12 @@ max-width: 100%;
   gap: 10px;
   margin-top: 20px;
   padding-left: 15px;
-  border-left: 2px solid black;
-  color: #632d45;
+  border-left: 2px solid white;
+  color: white;
 }
 
 .pointedu {
   padding: 10px 15px;
-  background: #f5f5f5;
   position: relative;
   font-family: Cormorant Garamond, sans-serif;
 }
@@ -507,7 +590,7 @@ max-width: 100%;
   transform: translateY(-50%);
   width: 10px;
   height: 10px;
-  background: black;
+  background: white;
   border-radius: 50%;
 }
 
@@ -523,8 +606,6 @@ footer {
   padding-top: 30px;
 }
 
-
-
 #menuBtn img {
   width: 60px;
 }
@@ -533,16 +614,16 @@ footer {
   display: block;
   width: 60px;
   height: 60px;
-  background: white;
-  border: 0 solid black;
+  border: 0 solid white;
   cursor: pointer;
   position: relative;
   z-index: 20;
   margin: 10px 0 0 10px;
+  background: transparent;
 }
 
 #menuBtn a {
- color:black;
+ color:white;
 }
 
 #menuBtn::after {
@@ -554,7 +635,7 @@ footer {
   font-family: "Bebas Neue", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
-  color: black;
+  color: white;
 }
 
 #menu {
@@ -577,7 +658,7 @@ footer {
 
 
 .divider {
-  border-top: 3px solid #632d45;
+  border-top: 0;
   margin: 40px 0 10px 0;
   display: block;
 }
@@ -613,7 +694,7 @@ nav {
 .navlink {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .navlink img {
@@ -622,7 +703,6 @@ nav {
   left: 25%;
   top: 0%;
 }
-
 
 .navlink.swirl img {
   width: 30%;
@@ -640,52 +720,50 @@ nav {
   display: block;
 }
 
- .navlink:active img {
+.navlink:active img {
   display: block;
-  
 }
-
-
 
 #headerimg {
   max-width: 100vw;
 }
 
+.description {
+  text-align: right;
+  font-size: 0.8rem;
+}
 
-.project .description {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 2.5em;
-  width: 100%;
-  opacity: 1;
-  background-color: white;
-  color: #632d45;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.descriptionspan {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5vw;
+  width: 90vw;
+  margin: 5vh auto;
+  max-width: none;
 }
 
 .project {
-  width: 100vw;
+  width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: auto;
 }
 
 .project img {
+  display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
-
-.projectpage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 15px;
-  }
+.description {
+  font-size: 12px;
+}
 
 .project-text {
   order: 1;
@@ -725,7 +803,7 @@ p {
 }
 
 #showMore:active {
-  background-color: #632d45;
+  background-color: white;
 }
 
 
@@ -752,6 +830,33 @@ p {
 
 }
 
+@media screen and (min-width: 501px) and (max-width: 1200px) {
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 80vw;
+  gap: 5vw;
+  margin: 5vh auto;
+}
+
+.project {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+
+.project a {
+  display: block;
+  width: 100%;
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
 
 
 
@@ -797,3 +902,4 @@ p {
 }
 
 
+}
