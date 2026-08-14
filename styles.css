@@ -97,6 +97,7 @@ h3 {
 }
 
 a {
+  font-family: "SpaceGrotesk", sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -107,8 +108,8 @@ a:hover {
 }
 
 p {
-  font-family: SpaceGrotesk;
-  font-size: 1.1em;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-size: 1em;
   line-height: 1.6;
   color: white;
 }
@@ -212,7 +213,6 @@ footer p:last-child {
   display: block;
   text-align: center;
   margin: 20px auto;
-  font-family: Cormorant Garamond, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.2em;
   color: white;
 }
@@ -241,7 +241,7 @@ nav, nav a {
   display: flex;
   gap: 7vw;
   justify-content: center;
-  font-family: Cormorant Garamond;
+  font-family: SpaceGrotesk;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -411,9 +411,21 @@ nav, nav a {
   align-items: start;
 }
 
+.project-text h1 { 
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin: 3vh 0;
+}
+
+.project-text h1::first-letter { 
+  font-size: 5em;
+  font-family: KolkerBrush, sans-serif;
+}
 .descriptionspan {
   display: block;
-  font-family: SpaceGrotesk, sans-serif;
+  font-family: "SpaceGrotesk", sans-serif;
   font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -438,7 +450,6 @@ margin: 0 0 3vw 0;
 
 
 .project-text {
-  font-family: Cormorant Garamond, sans-serif;
   font-size: 1em;
 }
 
@@ -447,10 +458,6 @@ margin: 0 0 3vw 0;
   margin: 0;
 }
 
-p {
-  font-family: Cormorant Garamond, sans-serif;
-  font-size: 1.1em;
-}
 
 .link p {
   font-family: Cormorant Garamond, sans-serif;
@@ -523,21 +530,24 @@ max-width: 100%;
   transform: scale(1.03);
 }
 
-#showMore {
+#showMore, #showMore:visited, #showMore:active, #showMore:focus {
   display: block;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 10px 20px;
-  cursor: pointer;
-  background-color: white;
-  font-family: "Cormorant Garamond", 'Arial Narrow Bold', sans-serif;
+  background: FireBrick;
+  color: black;
   font-weight: bold;
-  color: red;
-  border: none;
+  border: 1px solid FireBrick;
+  font-family: SpaceGrotesk, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-
 #showMore:hover {
-  background-color: white;
+  background: black;
+  color: FireBrick;
 }
 
 .hidden-photo {
@@ -579,7 +589,7 @@ max-width: 100%;
 .pointedu {
   padding: 10px 15px;
   position: relative;
-  font-family: Cormorant Garamond, sans-serif;
+  font-family: "Spacegrotesk", sans-serif;
 }
 
 .pointedu::before {
@@ -592,6 +602,11 @@ max-width: 100%;
   height: 10px;
   background: white;
   border-radius: 50%;
+}
+
+.contact {
+  max-width: 900px;
+  gap: 0;
 }
 
 /* Mobile */
@@ -827,6 +842,36 @@ p {
   flex-direction: column;
   align-items: center;
 }
+
+.projectpageabout {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-text {
+  display: contents;
+}
+
+.projectpageabout h1 {
+  order: 1;
+}
+
+.project-images {
+  order: 2;
+}
+
+.projectpageabout .about > p {
+  order: 3;
+}
+
+.projectpageabout .dividerimg {
+  order: 4;
+}
+
+.edu {
+  order: 5;
+}
+
 
 }
 
