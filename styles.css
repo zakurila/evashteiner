@@ -89,7 +89,8 @@ h2 {
 
 
 h3 {
-  font-family: Cormorant Garamond;
+  font-family: SpaceGrotesk;
+  text-transform: uppercase;
   font-size: 2em;
   font-weight: bold;
   color: white;
@@ -138,6 +139,11 @@ p {
   max-width: 400px;
 }
 
+.margin {
+  display: block;
+  margin: 15vh auto;
+}
+
 .firstletter-title {
   display: flex;
   align-items: baseline;
@@ -164,7 +170,7 @@ p {
   margin: 0 10vw;
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 1rem;
   color: white;
 }
 
@@ -207,14 +213,6 @@ footer p:last-child {
   font-size: 0.8rem;
   letter-spacing: 1px;
   margin: 0;
-}
-
-.back {
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-  font-size: 1.2em;
-  color: white;
 }
 
 .back:hover {
@@ -404,7 +402,7 @@ nav, nav a {
 
 .projectpage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 5vw;
   width: 80vw;
   margin: 10vh auto 0 auto;
@@ -416,6 +414,10 @@ nav, nav a {
   font-weight: 300;
   font-size: 1.5em;
   letter-spacing: 2px;
+  margin: 3vh 0;
+}
+
+.project-text p { 
   margin: 3vh 0;
 }
 
@@ -450,17 +452,28 @@ margin: 0 0 3vw 0;
 
 
 .project-text {
-  font-size: 1em;
+  font-size: max(14px, 1vw);
 }
 
-.project-text p{
+.project-text p {
   text-indent: 2em;
   margin: 0;
+  line-height: 1.6;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 20px auto;
 }
 
 
-.link p {
-  font-family: Cormorant Garamond, sans-serif;
+.link:hover {
+  color: red;
 }
 
 
@@ -473,6 +486,7 @@ margin: 0 0 3vw 0;
 
 .twopics {
   display: flex;
+  width: 50%;
 }
 
 
@@ -483,6 +497,27 @@ margin: 0 0 3vw 0;
 
 .flex {
   display: flex;
+}
+
+.downnavigation {
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+  gap: 50px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.back, .arrow {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  align-self: center;
+}
+
+.arrow {
+  font-size: 2em;
+  line-height: 1;
 }
 
 
@@ -552,6 +587,153 @@ max-width: 100%;
 
 .hidden-photo {
   display: none !important;
+}
+
+
+/* Webdesign */
+
+.webdesign {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 5vh;
+  width: 90vw;
+  margin: 5vh auto;
+}
+
+.web {
+  width: 80vw; margin: 0 auto;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 40vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.verticalcarousel {
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: white;
+  color: FireBrick;
+}
+
+
+/* Image lightbox */
+
+.lightbox {
+  display: none;
+  position: fixed !important;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+
+  background: rgba(0, 0, 0, 0.9);
+
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 85vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 40px;
+  cursor: pointer;
+  background: FireBrick;
+  color: black;
+  font-weight: bold;
+  border: 1px solid FireBrick;
+  font-family: SpaceGrotesk, sans-serif;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: black;
+  color: FireBrick;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
 }
 
 
@@ -831,6 +1013,7 @@ p {
 .projectpage {
   display: flex !important;
   flex-direction: column;
+  width: 90vw;
 }
 
 .projectpage > .project-text {
@@ -841,6 +1024,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
 
 .projectpageabout {
@@ -850,6 +1034,7 @@ p {
 
 .project-text {
   display: contents;
+  min-width: 0;
 }
 
 .projectpageabout h1 {
@@ -870,6 +1055,105 @@ p {
 
 .edu {
   order: 5;
+}
+
+.mobiledark {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* webdesign */
+
+.project-text.web {
+  width: 90vw;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.webdesign {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 600px;
+  margin: 8vh auto;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.webdesign > .verticalcarousel {
+  width: 70%;
+  max-width: 300px;
+  margin: 0 auto;
+  order: 2;
+}
+
+
+.webdesign > .project-text {
+  width: 90%;
+  min-width: 0;
+  order: 2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.webdesign > .project-text h3 {
+  margin-top: 0;
+}
+
+.webdesign > .project-text p {
+  font-size: 16px;
+  text-align: left;
+}
+
+
+.project-images {
+  width: 100%;
+  min-width: 0;
+  display: block;
+}
+
+.project-images .carousel {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prev,
+.next {
+  padding: 8px 10px;
+  font-size: 18px;
+}
+
+.prev {
+  left: 5px;
+}
+
+.next {
+  right: 5px;
+}
+
+.link {
+  color: red;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.project-text .link {
+  text-align: center;
 }
 
 
@@ -905,26 +1189,6 @@ p {
 
 
 
-.carousel {
-  position: relative;
-  width: 600px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-
-.slide {
-  min-width: 100%;
-}
-
-.slide img {
-  width: 100%;
-  display: block;
-}
 
 .prev,
 .next {
