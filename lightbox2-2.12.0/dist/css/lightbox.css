@@ -1,10 +1,10 @@
 :root {
   --lb-overlay-opacity: 0.8;
   --lb-overlay-bg: black;
-  --lb-border-radius: 3px;
-  --lb-image-border-width: 4px;
-  --lb-image-border-color: white;
-  --lb-container-bg: white;
+  --lb-border-radius: 0;
+  --lb-image-border-width: 2px;
+  --lb-image-border-color: red;
+  --lb-container-bg: black;
   --lb-text-color: #ccc;
   --lb-caption-link-color: #4ae;
   --lb-number-color: #999999;
