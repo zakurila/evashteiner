@@ -461,6 +461,7 @@ margin: 0 0 3vw 0;
   line-height: 1.6;
 }
 
+
 .link {
   display: block;
   width: 100%;
@@ -481,8 +482,6 @@ margin: 0 0 3vw 0;
  display: block;
  max-width: 100%;
 }
-
-
 
 .twopics {
   display: flex;
@@ -758,6 +757,16 @@ max-width: 100%;
 }
 
 
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  max-width: 900px;
+  gap: 0;
+  margin: 10vh auto 0 auto;
+  align-items: start;
+}
+
+
 .edu {
   display: flex;
   flex-direction: column;
@@ -786,9 +795,13 @@ max-width: 100%;
   border-radius: 50%;
 }
 
-.contact {
-  max-width: 900px;
-  gap: 0;
+
+
+.linkslogos {
+  display: flex;
+  justify-content: left;
+  gap: 2vw;
+  margin-top: 20px;
 }
 
 /* Mobile */
@@ -1061,6 +1074,38 @@ p {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 90vw;
+}
+.contact h1,
+.contact p,
+.contact a  {
+  display: block;
+  margin: 3vh auto;
+  max-width: 90vw;
+  text-align: center;
+}
+
+
+.linkslogos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  margin: 5vh auto 10vh auto;
+  gap: 2vh;
+ 
+}
+
+
+
 /* webdesign */
 
 .project-text.web {
@@ -1174,6 +1219,12 @@ p {
   text-align: center;
   margin: 0 auto;
 }
+
+
+.linkslogos img {
+  width: 40px;
+  height: auto;
+}
 }
 
 @media screen and (min-width: 501px) and (max-width: 1200px) {
@@ -1226,6 +1277,7 @@ p {
 .next {
   right: 10px;
 }
+
 
 
 }
